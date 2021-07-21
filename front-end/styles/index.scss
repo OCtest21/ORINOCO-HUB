@@ -8,23 +8,28 @@
 }
 
 
-body {
+* {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
-.head_container {
+.header_container {
     display: flex;
     justify-content: space-between;
 }
 
-.logo {
+.flex-center {
     display: flex;
     align-items: center;
 }
 
-.fa-shopping-cart {
+.list-style {
+    list-style: none;
     display: flex;
-    align-items: center;
+}
+
+.a-link {
+    text-decoration: none;
+    color: black;
 }

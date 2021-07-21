@@ -8,7 +8,7 @@
 
     
     <!-- css + icon -->
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <script src="https://kit.fontawesome.com/3a0162c1dc.js" crossorigin="anonymous"></script>
 
     <title>Orinoco - Le spécialiste de l'appareil photo vintage</title>
@@ -21,15 +21,14 @@
 <!--Header + nav menu-->
 <header>
     <div class="header_container">
-        <div class="logo">
+        <div class="logo flex-center">
             <p>Orinoco</p>
             <i class="fas fa-camera-retro"></i>
         </div>
-        <ul class="navbar">
-            <li class="navbar_item">       
-                <a class="nav-link" href="basket.html"><i class="fas fa-shopping-cart"><p>Panier</p></i></a>
-            </li>
-        </ul>
+        <div class="navbar container">
+            <a class="nav-link a-link" href="basket.html">Panier</a>
+            <a class="nav-link a-link" href="#"><i class="fas fa-shopping-cart flex-center"></i> </a>  
+        </div>
     </div>
 </header>
 
@@ -42,18 +41,18 @@
 </main>
 
 <!-- Card -->
-<section class="card_container">
+<section class="products-container">
     <div class="card_list" id="liste">
     </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer_container">
-    <ul class="list-inline">
-        <li class="list-inline-item"><a href="index.html" title="Accueil">Accueil</a></li>
-        <li class="list-inline-item"><a href="mailto:orinoco@mail.com?subject=Contact" title="Contact">Contact</a>
+    <ul class="list-inline list-style">
+        <li class="list-inline-item"><a class="a-link" href="index.html" title="Accueil">Accueil</a></li>
+        <li class="list-inline-item"><a class="a-link" href="mailto:orinoco@mail.com?subject=Contact" title="Contact">Contact</a>
         </li>
-        <li class="list-inline-item"><a href="#" title="Mentions Légales">Mentions Légales</a></li>
+        <li class="list-inline-item"><a class="a-link" href="#" title="Mentions Légales">Mentions Légales</a></li>
     </ul>
     <p class="copyright text-center">Orinoco © 2021</p>
 </footer>
