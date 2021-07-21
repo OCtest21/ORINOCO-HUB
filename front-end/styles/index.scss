@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap') format("woff2");
+    font-family: "Montserrat-title";
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.head_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.fa-shopping-cart {
+    display: flex;
+    align-items: center;
+}
