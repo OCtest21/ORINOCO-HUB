@@ -1,1 +1,128 @@
-/* No CSS *//*# sourceMappingURL=product.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@font-face {
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap") format("woff2");
+  font-family: "Montserrat-title";
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+*,
+::before ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_container {
+  padding: 50px 0px;
+}
+
+.center-flex {
+  display: flex;
+  align-items: center;
+}
+
+.list-style {
+  list-style: none;
+  display: flex;
+}
+
+.a-link {
+  text-decoration: none;
+  color: black;
+  padding-right: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
+.container .product-card {
+  margin: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  background: #dee9f7;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 0px 10px 0px rgba(63, 63, 63, 0.49);
+}
+.container .product-card__img {
+  border-radius: 20px 20px 20px 20px;
+}
+.container .product-card__infos {
+  color: #252526;
+  padding: 15px;
+  height: 100%;
+}
+.container .product-card__infos__title {
+  font-family: "MV Boli";
+  font-size: 32px;
+}
+.container .product-card__infos__description {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.container .product-card__infos__price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.container .product-card__infos__buttons {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.container .product-card__infos__quantity {
+  margin-bottom: 20px;
+}
+.container .product-card__infos__color {
+  margin-bottom: 40px;
+}
+.container .product-card__infos .added-to-cart-confirmation {
+  visibility: hidden;
+}
+.container .product-card__infos .added-to-cart-confirmation p {
+  padding: 5px;
+  background-color: #64c264;
+  border: #368a36 1px solid;
+}
+.container .product-card__infos .product-card__infos__button {
+  padding: 20px;
+  border-radius: 5px;
+  border: solid 1px #252526;
+}
+.container .product-card__infos .back-to-home {
+  background: #d8d8d8;
+}
+.container .product-card__img {
+  height: 50%;
+  width: 100%;
+  background: #444;
+}
+.container .product-card__img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+#CameraNum {
+  width: 50px;
+}
+
+/*# sourceMappingURL=product.css.map */
