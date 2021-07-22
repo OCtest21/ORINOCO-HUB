@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <!-- css + icon -->
+    <link rel="stylesheet" href="styles/cart.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/3a0162c1dc.js" crossorigin="anonymous"></script>
+
+    <title>Orinoco - Le spécialiste de l'appareil photo vintage</title>
+
+</head> 
+
+<!--Body-->
+<body>
+
+<!--Header + nav menu-->
+<header>
+    <div class="header_container">
+        <div class="logo center-flex">
+            <h1>Orinoco</h1>
+        </div>
+        <div class="navbar">
+            <a class="nav-link a-link" href="front-end/index.html">Accueil</a>  
+            <a class="nav-link a-link" href="cart.html">Panier</a>
+        </div>
+    </div>
+</header>
+
+<!-- Main -->
+<main>
+    <div class="container">
+        <div class="cart-card">
+            <h2 class="cart">Votre panier</h2>
+            <div class="cart-card__recap">
+                <div class="cart-card__recap__row ">
+                    <div class="cart-card__recap__title first-line">Nom</div>
+                    <div class="cart-card__recap__title title-quantity first-line">Quantité</div>
+                    <div class="cart-card__recap__title data-price first-line">Prix </div>
+
+                </div>                     
+                <div class="width-to-empty-cart">
+                    <a href="cart.html">
+                        <div class="cart-card__form__button to-empty-cart">
+                            Vider le panier
+                        </div>
+                    </a>
+                </div>
+                <h2 class="total"></h2>            
+            </div>
+
+            <div class="cart-card__form">
+                <h2>Votre adresse de livraison</h2>
+                <form class="form">
+                    <div class="name-and-lastname">
+                        <div class="cart-card__form-line" id="bloc__name">
+                            <label for="name">Prénom :</label>
+                            <input type="text" placeholder="Prénom" id="name" name="user_name" required> 
+                        </div>
+                        <div class="cart-card__form-line" id="bloc__lastname">
+                            <label for="lastname">Nom :</label>
+                            <input type="text" placeholder="Nom" id="lastname" name="user_lastname" required>
+                        </div>
+                    </div>        
+                    <div class="postal-and-city">
+                        <div class="cart-card__form-line" id="bloc__postal">
+                            <label for="postal">Code postal :</label>
+                            <input type="text" placeholder="Code postal" id="postal" name="user_postal" required>
+                        </div>
+                        <div class="cart-card__form-line" id="bloc__city">
+                            <label for="city">Ville :</label>
+                            <input type="text" placeholder="Ville" id="city" name="user_city" required>
+                        </div>
+                    </div>
+                    <div class="cart-card__form-line" id="bloc__adress">
+                        <label for="adress">Adresse :</label>
+                        <input type="text" placeholder="Adresse de livraison" id="adress" name="user_adress" required>
+                    </div>
+                    <div class="cart-card__form-line" id="bloc__mail">
+                        <label for="mail">Adresse mail :</label>
+                        <input type="email" placeholder="Adresse mail" id="mail" name="user_mail" required>
+                    </div>
+                    <div class="cart-card__form-line" id="bloc__phone">
+                        <label for="phone" >Numéro de téléphone :</label>
+                        <input type="tel" placeholder="Numéro de téléphone" id="phone" name="phone" required >
+                    </div>
+                    <div class="erreur"></div>
+                    <div class="cart-card__form__buttons">
+                            <div id="submit" class="cart-card__form__button to-pay" >Commander</div>
+                    </div>
+                </form>
+
+                <div class="added-to-cart-confirmation">
+                    <p class="confirmation-text"></p>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="if-empty-cart">
+            <h2>Votre panier est vide. <a href="index.html">Remplissez le d'abord !</a></h2>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer_container">
+    <ul class="list-inline list-style">
+        <li class="list-inline-item"><a class="a-link" href="index.html" title="Accueil">Accueil</a></li>
+        <li class="list-inline-item"><a class="a-link" href="mailto:orinoco@mail.com?subject=Contact" title="Contact">Contact</a>
+        </li>
+        <li class="list-inline-item"><a class="a-link" href="#" title="Mentions Légales">Mentions Légales</a></li>
+    </ul>
+    <p class="copyright text-center">Orinoco © 2021</p>
+</footer>
+
+<!-- script -->
+<script type="module" src="scripts/cart.js"></script>
+
+</body>
+
+</html>
