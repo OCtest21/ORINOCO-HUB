@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "confirmation.scss"
-    ],
-    "names": [],
-    "file": "confirmation.css"
-}
+{"version":3,"sourceRoot":"","sources":["confirmation.scss"],"names":[],"mappings":"AAAQ;AAGR;EACI;EACA;;AAYJ;EACI;EACA;EACA;;;AAIJ;AAAA;EAEE;EACA;EACA;;;AAGF;EACE;;;AAIF;EACI;EACA;EACA;;;AAGJ;EACE;;;AAGF;EACI;EACA;;;AAGJ;EACI;EACA;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EArDI;EACA;EACA;EAqDA;;AACA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEF;EACE;;AACA;EACE","file":"confirmation.css"}

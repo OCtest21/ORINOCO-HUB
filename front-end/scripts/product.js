@@ -14,13 +14,13 @@ const colorSelect = document.querySelector("#color-select");
 main();
 
 function main() {
-  checkIf404();
+  /*checkIf404();*/
   getArticles();
   addToCart();
 }
 
 
-function checkIf404() {
+/*function checkIf404() {
   window.addEventListener("error", (e) => {
       let container = document.querySelector(".container");
       container.innerHTML = `<p>Cette page n'existe pas. <a class="back-to-home" href="index.html">Retourner dans la boutique ?</a></p>`;
@@ -32,6 +32,7 @@ function checkIf404() {
     true
   );
 }
+*/
 
 function getArticles() {
 
@@ -52,7 +53,7 @@ function getArticles() {
       productCardName.innerHTML = article.name;
       productCardImg.src = article.imageUrl;
       productCardDescription.innerText = article.description;
-
+      console.log(article)
      
       article.price = article.price / 100;
       productCardPrice.innerText = new Intl.NumberFormat("fr-FR", {
@@ -61,9 +62,9 @@ function getArticles() {
       }).format(article.price);
 
       let colorSelect = document.getElementById("color-select");
-      for (let i = 0; i < article.colors.length; i++) {
+      for (let i = 0; i < article.lenses.length; i++) {
         let option = document.createElement("option");
-        option.innerText = article.colors[i];
+        option.innerText = article.lenses[i];
         colorSelect.appendChild(option);
       }
     });
@@ -79,7 +80,7 @@ function addToCart() {
      
       let productAdded = {
         name: productCardName.innerHTML,
-        price: parseFloat(productCardPrice.innerHTML),
+        price: parseFloat(article.price),
         quantity: parseFloat(document.querySelector("#CameraNum").value),
         _id: id,
       };
