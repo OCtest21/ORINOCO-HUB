@@ -47,12 +47,14 @@ function displayCart() {
       "price"
     );
 
+    
     // Affichage du prix avec le formatage €
     productPrice.innerHTML = new Intl.NumberFormat("fr-FR", {
       style: "currency",
       currency: "EUR",
     }).format(copyOfLS[produit].price * copyOfLS[produit].quantity);
   }
+  
 }
 
 function countTotalInCart() {
@@ -75,7 +77,13 @@ function countTotalInCart() {
 
 
   // Transformer en nombre chaque valeur du tableau
-  console.log(arrayOfPrice)
+  console.log(copyOfLS)
+  let sum = 0;
+  for(let product of copyOfLS)
+  {
+    sum += product.price * product.quantity;    
+  }
+  console.log(sum);
   arrayOfPrice = arrayOfPrice.map((x) => parseFloat(x));
   console.log(arrayOfPrice)
 
@@ -89,13 +97,16 @@ function countTotalInCart() {
 
 
   // Affichage du prix avec formatage €
-  totalPrice.innerText = `Total : ${(arrayOfPrice = new Intl.NumberFormat(
+  totalPrice.innerText = `Total : ${(sum = new Intl.NumberFormat(
     "fr-FR",
     {
       style: "currency",
       currency: "EUR",
     }
-  ).format(arrayOfPrice))}`;
+  ).format(sum))}`;
+  
+  
+  
 }
 
 
@@ -141,9 +152,13 @@ function checkFormAndPostRequest() {
 
       // Si le formulaire est valide, le tableau productsBought contiendra un tableau d'objet qui sont les produits acheté, et order contiendra ce tableau ainsi que l'objet qui contient les infos de l'acheteur
       let productsBought = [];
-      productsBought.push(copyOfLS);
 
-      const order = {
+      copyOfLS.map((item)=>{
+        console.log(item._id)
+        productsBought.push(item._id);
+      } )
+
+      const data = {
         contact: {
           firstName: inputName.value,
           lastName: inputLastName.value,
@@ -158,7 +173,7 @@ function checkFormAndPostRequest() {
       // Création de l'entête de la requête
       const options = {
         method: "POST",
-        body: JSON.stringify(order),
+        body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" },
       };
 
@@ -167,7 +182,7 @@ function checkFormAndPostRequest() {
       priceConfirmation = priceConfirmation.split(" :");
 
       // Envoie de la requête avec l'en-tête. On changera de page avec un localStorage qui ne contiendra plus que l'order id et le prix.
-      fetch("http://localhost:3000/api/teddies/order", options)
+      fetch("http://localhost:3000/api/cameras/order", options)
         .then((response) => response.json())
         .then((data) => {
           localStorage.clear();

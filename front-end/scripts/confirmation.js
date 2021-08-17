@@ -5,12 +5,16 @@ function main() {
 }
 
 function displayOrderIdAndPrice() {
-  const totalConfirmation = document.querySelector(".total span");
-  const orderId = document.querySelector(".orderid span");
+
   
-  totalConfirmation.innerText = localStorage.getItem("total");
-  orderId.innerText = localStorage.getItem("orderId");
+  let spanPrice = document.querySelector('.display-price');  
+  spanPrice.innerText = localStorage.getItem('total');
+
+  let spanId = document.querySelector('.display-orderid'); 
+  spanId.innerText = localStorage.getItem("orderId");
+
 
   // On vide le localStorage pour recommencer plus tard le processus d'achat
   localStorage.clear(); 
 }
+
